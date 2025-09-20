@@ -15,7 +15,7 @@ function App() {
       let apiResponse = await axios.get(apiPath)
       setMoviesData([...apiResponse.data.Search])
     } catch (ex) {
-      alert('Unable to process your Request ...')
+      alert('Site is under maintance ...')
     }
   }
   return (
