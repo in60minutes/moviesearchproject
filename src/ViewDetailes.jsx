@@ -10,7 +10,7 @@ const ViewDetailes = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&i=${imdbID}`
+        let apiPath = `https://www.omdbapi.com/?apikey=c0a6198e&i=${imdbID}`
         let apiResponse = await axios.get(apiPath)
         setData({ ...apiResponse.data })
       } catch (error) {

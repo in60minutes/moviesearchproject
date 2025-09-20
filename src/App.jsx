@@ -11,7 +11,7 @@ function App() {
     // DATA
 
     try {
-      let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&s=${searchWord}`
+      let apiPath = `https://www.omdbapi.com/?apikey=c0a6198e&s=${searchWord}`
       let apiResponse = await axios.get(apiPath)
       setMoviesData([...apiResponse.data.Search])
     } catch (ex) {
