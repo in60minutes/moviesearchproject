@@ -10,13 +10,16 @@ function App() {
     // METHOD
     // DATA
 
-    try {
-      let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&s=${searchWord}`
-      let apiResponse = await axios.get(apiPath)
-      setMoviesData([...apiResponse.data.Search])
-    } catch (ex) {
-      alert('Site is under maintance ...')
-    }
+    // try {
+    //   let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&s=${searchWord}`
+    //   let apiResponse = await axios.get(apiPath)
+    //   setMoviesData([...apiResponse.data.Search])
+    // } catch (ex) {
+    //   alert('Site is under maintance ...')
+    // }
+    let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&s=${searchWord}`
+    let apiResponse = await axios.get(apiPath)
+    setMoviesData([...apiResponse.data.Search])
   }
   return (
     <>
