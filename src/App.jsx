@@ -12,9 +12,7 @@ function App() {
 
     try {
       let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&s=${searchWord}`
-      console.log(apiPath)
       let apiResponse = await axios.get(apiPath)
-      console.log(apiResponse)
       setMoviesData([...apiResponse.data.Search])
     } catch (ex) {
       alert('Unable to process your Request ...')

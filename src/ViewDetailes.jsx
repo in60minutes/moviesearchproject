@@ -11,9 +11,7 @@ const ViewDetailes = () => {
     const getData = async () => {
       try {
         let apiPath = `http://www.omdbapi.com/?apikey=c0a6198e&i=${imdbID}`
-        console.log(apiPath)
         let apiResponse = await axios.get(apiPath)
-        console.log(apiResponse)
         setData({ ...apiResponse.data })
       } catch (error) {
         setData(null)
